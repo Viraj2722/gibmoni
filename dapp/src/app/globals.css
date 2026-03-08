@@ -4,6 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-pixel-square: var(--font-geist-pixel-square);
+    --font-pixel-grid: var(--font-geist-pixel-grid);
+    --font-pixel-circle: var(--font-geist-pixel-circle);
+    --font-pixel-triangle: var(--font-geist-pixel-triangle);
+    --font-pixel-line: var(--font-geist-pixel-line);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -115,8 +122,9 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
+  html {
     @apply bg-background text-foreground;
+    font-family: var(--font-pixel-square);
   }
 
   button:not(:disabled),
@@ -129,4 +137,17 @@
   height: auto !important;
   @apply !border !bg-background !shadow-xs hover:!bg-accent !text-accent-foreground hover:!text-accent-foreground dark:!bg-input/30 !border-input/10 dark:!border-input dark:hover:!bg-input/50;
   @apply !px-2 !py-[6px] !rounded-md !text-sm !font-semibold !shadow-sm !transition-all;
+
+}
+
+.font-pixel {
+  font-family: var(--font-pixel-square);
+}
+
+.font-code {
+  font-family: var(--font-mono);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
 }

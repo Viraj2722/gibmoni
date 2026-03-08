@@ -8,16 +8,14 @@ export const metadata: Metadata = {
   title: 'gibmoni',
   description: 'gib me more moni',
 }
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { GeistPixelSquare } from "geist/font/pixel";
 
-const links: { label: string; path: string }[] = [
-  // More links...
-  { label: 'Home', path: '/' },
-  { label: 'Account', path: '/account' },
-]
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable}`}>
       <body className={`antialiased`}>
         <AppProviders>
           <Navbar />
@@ -28,6 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   )
 }
+
 // Patch BigInt so we can log it using JSON.stringify without any errors
 declare global {
   interface BigInt {
