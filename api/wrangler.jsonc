@@ -12,6 +12,15 @@
 	},
 	"compatibility_flags": [
 		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "gibmoni_db",
+			"database_name": "gibmoni-db",
+			"database_id": "9e282cb6-66db-44e3-a291-b1d43aac13db",
+			"remote": true,
+			"migrations_dir": "drizzle"
+		}
 	]
 	/**
 	 * Smart Placement
